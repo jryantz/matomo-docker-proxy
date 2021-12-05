@@ -1,4 +1,4 @@
-# Docker (Matomo - NGINX - MariaDB)
+# Docker (Matomo - MariaDB)
 
 [Matomo](https://matomo.org) is the leading open-source analytics platform that gives you more that just powerful analytics:
 
@@ -16,12 +16,9 @@
         - `MYSQL_ROOT_PASSWORD`
     1. `db.env`
         - `MYSQL_PASSWORD`
-        - `MATOMO_DATABASE_PASSWORD`
 1. Run
-    - Local Development
+    - Deploy
         - `docker compose up --build`
-    - Production
-        - `docker compose -f docker-compose-deploy.yml up --build`
     - `--build`
         - Builds the image before starting the container
 
