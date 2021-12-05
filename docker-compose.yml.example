@@ -6,7 +6,7 @@ services:
     image: nginx:alpine
     restart: always
     networks:
-      - nginx-proxy
+      - proxy
     ports:
       - 8080:80
     volumes:
@@ -45,3 +45,8 @@ services:
 volumes:
   db:
   matomo:
+
+networks:
+  proxy: 
+    external:
+      name: nginx-proxy
