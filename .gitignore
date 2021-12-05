@@ -3,3 +3,6 @@
 
 db.env
 docker-compose.yml
+
+config/
+logs/
