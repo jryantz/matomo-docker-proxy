@@ -7,6 +7,7 @@ services:
     restart: always
     networks:
       - proxy
+      - net
     ports:
       - 8080:80
     volumes:
@@ -22,6 +23,8 @@ services:
     restart: always
     depends_on:
       - db
+    networks: 
+      - net
     volumes:
       # - ./config:/var/www/html/config:rw
       # - ./logs:/var/www/html/logs
@@ -35,6 +38,8 @@ services:
     image: mariadb:10.6
     command: --max-allowed-packet=64MB
     restart: always
+    networks: 
+      - net
     volumes:
       - db:/var/lib/mysql
     environment:
@@ -50,3 +55,5 @@ networks:
   proxy: 
     external:
       name: nginx-proxy
+  net: 
+    driver: bridge
