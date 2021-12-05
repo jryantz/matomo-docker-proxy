@@ -19,7 +19,7 @@ services:
       - LETSENCRYPT_EMAIL=
 
   app:
-    image: matomo:4.5-fpm-alpine
+    image: matomo:4-fpm-alpine
     restart: always
     depends_on:
       - db
