@@ -1,5 +1,7 @@
 # Docker (Matomo - MariaDB)
 
+Use this repository to quickly setup a Matomo instance with MariaDB, NGINX, and a [reverse proxy](https://github.com/nginx-proxy/acme-companion/blob/main/docs/Advanced-usage.md).  The linked reverse proxy advanced usage instructions will help configure Matomo on a webserver with multiple sites all running in Docker containers while also using LetsEncrypt to automate SSL renewal.
+
 [Matomo](https://matomo.org) is the leading open-source analytics platform that gives you more that just powerful analytics:
 
 - Free open-source software
